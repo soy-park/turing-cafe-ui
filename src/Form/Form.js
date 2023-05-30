@@ -5,7 +5,7 @@ function Form(props) {
   const [name, setName] = useState('')
   const [date, setDate] = useState('')
   const [time, setTime] = useState('')
-  const [number, setNumber] = useState(0)
+  const [number, setNumber] = useState()
 
   const submitRes = event => {
     event.preventDefault();
