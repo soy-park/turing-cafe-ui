@@ -4,7 +4,8 @@ import CardInfo from "../Card/CardInfo";
 
 const ResContainer = ({ reservations, cancelRes }) => {
     const resCards = reservations.map(reservation => {
-        return <>
+        return (
+            <section className="card">
                 <CardInfo 
                     key={reservation.id}
                     name={reservation.name}
@@ -13,7 +14,8 @@ const ResContainer = ({ reservations, cancelRes }) => {
                     number={reservation.number}
                 />     
                 <button className="cancel" onClick={() => cancelRes(reservation.id)}>Cancel</button>
-        </>
+            </section>
+        )
     })
 
     return (

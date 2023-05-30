@@ -1,0 +1,25 @@
+.res-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+}
+
+.card {
+    background-color: white;
+    border: 4px solid teal;
+    border-radius: 10px;
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cancel {
+    height: 2em;
+    width: 12em;
+    background-color: teal;
+    color: white;
+    margin-top: 1em;
+}

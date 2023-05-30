@@ -1,10 +1,10 @@
 import React from "react";
 import "../Card/CardInfo.css";
 
-const CardInfo = ({ key, name, date, time, number }) => {
+const CardInfo = ({ cardKey, name, date, time, number }) => {
 
     return (
-        <article className='card'>
+        <article className='card-info'>
             <h2 className="name">{name}</h2>
             <p className="date">{date}</p>
             <p className="time">{time}</p>
