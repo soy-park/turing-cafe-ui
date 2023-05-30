@@ -1,19 +1,21 @@
 .res-container {
-    width: 100%;
-    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
 }
 
 .card {
     background-color: white;
     border: 4px solid teal;
     border-radius: 10px;
-    height: 15em;
+    height: 13em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .cancel {

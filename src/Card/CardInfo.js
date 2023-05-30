@@ -5,10 +5,10 @@ const CardInfo = ({ cardKey, name, date, time, number }) => {
 
     return (
         <article className='card-info'>
-            <h2 className="name">{name}</h2>
+            <p className="name">{name}</p>
             <p className="date">{date}</p>
-            <p className="time">{time}</p>
-            <p className="guests">{number}</p>
+            <p className="time">{time} pm</p>
+            <p className="guests">Number of guests: {number}</p>
         </article>
     )
 }
