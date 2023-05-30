@@ -8,7 +8,21 @@ class App extends Component {
       reservations: []
     }
   }
-  
+
+  componentDidMount = () => {
+    return fetch("http://localhost:3001/api/v1/reservations")
+      .then(response => {
+        if (!response.ok) {
+         throw new Error(`${response.status}, ${response.statusText}`)
+        }
+        return response.json()
+    }) 
+      .then(data => {
+        this.setState({ reservations: data })
+      })
+      .catch(err => {throw new Error(`${err}`)})
+  }
+
   render() {
     return (
       <div className="App">
@@ -16,9 +30,7 @@ class App extends Component {
         <div className='resy-form'>
 
         </div>
-        <div className='resy-container'>
-        
-        </div>
+        <resContainer className='resy-container' />
       </div>
     )
   }
