@@ -23,6 +23,13 @@ class App extends Component {
       .catch(err => {throw new Error(`${err}`)})
   }
 
+  cancelRes = (id) => {
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, { method: "DELETE" })
+    .then(response => response.json())
+    .then(res => this.setState({ reservations: res }))
+    .catch(err => {throw new Error(`${err}`)})
+  } 
+
   render() {
     return (
       <div className="App">
@@ -30,7 +37,7 @@ class App extends Component {
         <div className='resy-form'>
 
         </div>
-        <resContainer className='resy-container' reservations={this.state.reservations} />
+        <resContainer className='resy-container' reservations={this.state.reservations} cancel={this.cancelRes} />
       </div>
     )
   }
