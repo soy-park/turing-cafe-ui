@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+input {
+    padding: 4px;
+    width: 13em;
+}
+
+.make-res-button {
+    width: 14em;
+    background-color: teal;
+    color: white;
+    border-color: white;
+}

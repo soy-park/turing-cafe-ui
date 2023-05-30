@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'src/Form/Form.css';
+import '../Form/Form.css';
 
 function Form(props) {
   const [name, setName] = useState('')
@@ -34,7 +34,7 @@ function Form(props) {
           placeholder='Name'
           name='name'
           value={name}
-          onChange={event => setTitle(event.target.value)}
+          onChange={event => setName(event.target.value)}
         />
 
         <input
@@ -42,7 +42,7 @@ function Form(props) {
           placeholder='Date (mm/dd)'
           name='date'
           value={date}
-          onChange={event => setDescription(event.target.value)}
+          onChange={event => setDate(event.target.value)}
         />
 
         <input
@@ -50,7 +50,7 @@ function Form(props) {
           placeholder='Time'
           name='time'
           value={time}
-          onChange={event => setDescription(event.target.value)}
+          onChange={event => setTime(event.target.value)}
         />
 
         <input
@@ -58,7 +58,7 @@ function Form(props) {
           placeholder='Number of guests'
           name='number'
           value={number}
-          onChange={event => setDescription(event.target.value)}
+          onChange={event => setNumber(event.target.value)}
         />
 
         <button className="make-res-button" onClick={event => submitRes(event)}>Make Reservation</button>
