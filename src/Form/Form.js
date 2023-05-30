@@ -31,21 +31,37 @@ function Form(props) {
       <form>
         <input
           type='text'
-          placeholder='Title'
-          name='title'
-          value={title}
+          placeholder='Name'
+          name='name'
+          value={name}
           onChange={event => setTitle(event.target.value)}
         />
 
         <input
           type='text'
-          placeholder='Description'
-          name='description'
-          value={description}
+          placeholder='Date (mm/dd)'
+          name='date'
+          value={date}
           onChange={event => setDescription(event.target.value)}
         />
 
-        <button onClick={event => submitIdea(event)}>SUBMIT</button>
+        <input
+          type='text'
+          placeholder='Time'
+          name='time'
+          value={time}
+          onChange={event => setDescription(event.target.value)}
+        />
+
+        <input
+          type='text'
+          placeholder='Number of guests'
+          name='number'
+          value={number}
+          onChange={event => setDescription(event.target.value)}
+        />
+
+        <button className="make-res-button" onClick={event => submitRes(event)}>Make Reservation</button>
       </form>
     )
 }
