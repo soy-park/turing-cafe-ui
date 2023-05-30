@@ -1,11 +1,11 @@
 import React from "react";
-import "./resContainer.css";
-import resContainer from "src/resContainer/resContainer";
+import "./ResContainer.css";
+import CardInfo from "../Card/CardInfo";
 
-function resContainer({ reservations, cancelRes }) {
+const ResContainer = ({ reservations, cancelRes }) => {
     const resCards = reservations.map(reservation => {
         return <>
-                <Card 
+                <CardInfo 
                     key={reservation.id}
                     name={reservation.name}
                     date={reservation.date}
@@ -23,4 +23,4 @@ function resContainer({ reservations, cancelRes }) {
     )
 }
 
-export default resContainer;
+export default ResContainer;
